@@ -10,28 +10,24 @@
     <th>Name</th>
     <th>Gross salary</th>
     <th>Tax</th>
-    <th>Taxamount</th>
     <th>Net salary</th>
             </tr>
             <tr>
                 <td id="name1"></td>
                 <td id="grosssalary1"></td>
                 <td id="tax1"></td>
-                <td id="taxamount1"></td>
                 <td id="netsalary1"></td>
             </tr>
             <tr>
                 <td id="name2"></td>
                 <td id="grosssalary2"></td>
                 <td id="tax2"></td>
-                <td id="taxamount2"></td>
                 <td id="netsalary2"></td>
             </tr>
             <tr>
                 <td id="name3"></td>
                 <td id="grosssalary3"></td>
                 <td id="tax3"></td>
-                <td id="taxamount3"></td>
                 <td id="netsalary3"></td>
             </tr>
             <!-- Add more rows in HTML -->
@@ -39,14 +35,12 @@
     <td id="name4"></td>
     <td id="grosssalary4"></td>
     <td id="tax4"></td>
-    <td id="taxamount4"></td>
     <td id="netsalary4"></td>
 </tr>
 <tr>
     <td id="name5"></td>
     <td id="grosssalary5"></td>
     <td id="tax5"></td>
-    <td id="taxamount5"></td>
     <td id="netsalary5"></td>
 </tr>
         </table>
@@ -58,7 +52,7 @@
             var taxamount;
             
             for(var i=0;i<5;i++){
-            var empname=prompt("enter the name of employee " + (i + 1)+ ":","name");
+            var empname=prompt("enter the name of employee " + (i + 1)+ "name:","name");
             name[i]=empname;
             var empsalary=parseFloat(prompt("Enter gross salary for " + empname + " (in RWFS):",));
             grosssalary[i]=empsalary;
@@ -71,13 +65,12 @@
                 netsalary[i]=grosssalary[i];
                 }
         
-            document.getElementById("name" + (i + 1)).innerHTML = empname;
+            document.getElementById("name" + (i + 1)).innerHTML = name[i];
             document.getElementById("grosssalary" + (i + 1)).innerHTML = grosssalary[i];
             document.getElementById("tax" + (i + 1)).innerHTML = tax;
-            document.getElementById("taxamount" + (i + 1)).innerHTML = taxamount;
             document.getElementById("netsalary" + (i + 1)).innerHTML = netsalary[i];
             }
-            console.log(netsalary);
+            console.log(netsalary[i]);
         </script>
     </body>
 </html>
